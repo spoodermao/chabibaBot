@@ -1,9 +1,8 @@
 FROM python:3.10
 
 RUN apt update && apt upgrade -y
-RUN pip install --upgrade pip && \
-    pip install python-telegram-bot --pre &&\
-    pip install python-dotenv
+COPY requirements.txt requirements.txt
+RUN pip install --upgrade pip && pip install -r requirements.txt 
 
 COPY bot /bot/
 
