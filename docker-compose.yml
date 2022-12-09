@@ -1,0 +1,6 @@
+version: "1"
+
+services:
+  app:
+    image: python:3.10
+    build: .
