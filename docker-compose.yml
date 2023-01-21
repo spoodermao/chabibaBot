@@ -4,3 +4,7 @@ services:
   app:
     image: python:3.10
     build: .
+    environment:
+      - TOKEN=${TOKEN}
+      - MANGODB_USERNAME=${MANGODB_USERNAME}
+      - MANGODB_PASSWORD=${MANGODB_PASSWORD}
